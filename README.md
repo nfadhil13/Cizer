@@ -69,18 +69,18 @@ Note : Maximum breakpoint is used for MaxwidhtContainer
 * `Cizer.break` Break the application
 
 
-### How To Use
+## How To Use ?
 
-##### The Not Effective Way (Avoid Const Widget)
+### The Not Effective Way (Avoid Const Widget)
 The most "dirty" way of using Cizer is to avoid using const on any widget that using cizer inside it (like `Cizer.isDesktop` or `.sp`). Not only on the widget that using it, but also every parent that using the widget.
 
-###### Why?
+##### Why?
 When A widget given a const,  Flutter will not rebuilt the widget, this cause the widget would not be responsive.
 
-##### The Effective Way (Able to use Const Widget)
+### The Effective Way (Able to use Const Widget)
 If you choose to still using const for the sake of performance, then Cizer give you `ResponsiveLayout`  widget to wrap your widget that need to be responsive. When you are using `ResponsiveLayout` only the needed widget will be rebuilt, and you are still able to use const widget.
  
-##### `ResponsiveLayout`
+#### `ResponsiveLayout`
 This is the default constructor of `ResponsiveLayout`.  You might use this class when you have excatly different things to show on every breakpoints. We are using mobile first principle, so the only required parameter are mobile body. 
 
 Here is the example of using responsivelayout :
@@ -119,3 +119,10 @@ With  `ResponsiveLayout.freeBuild` you can solve it with less code. Here is the 
         )
     );
 ```
+
+
+
+
+
+
+
